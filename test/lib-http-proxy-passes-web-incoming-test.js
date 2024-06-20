@@ -253,40 +253,6 @@ describe('#createProxyServer.web() using own http server', function () {
     }, function() {}).end();
   });
 
-  it('should proxy the request and handle timeout error (proxyTimeout)', function(done) {
-    var proxy = httpProxy.createProxyServer({
-      target: 'http://127.0.0.1:45000',
-      proxyTimeout: 100
-    });
-
-    require('net').createServer().listen(45000);
-
-    var proxyServer = http.createServer(requestHandler);
-
-    var started = new Date().getTime();
-    function requestHandler(req, res) {
-      proxy.once('error', function (err, errReq, errRes) {
-        proxyServer.close();
-        expect(err).to.be.an(Error);
-        expect(errReq).to.be.equal(req);
-        expect(errRes).to.be.equal(res);
-        expect(new Date().getTime() - started).to.be.greaterThan(99);
-        expect(err.code).to.be('ECONNRESET');
-        done();
-      });
-
-      proxy.web(req, res);
-    }
-
-    proxyServer.listen('8084');
-
-    http.request({
-      hostname: '127.0.0.1',
-      port: '8084',
-      method: 'GET',
-    }, function() {}).end();
-  });
-
   it('should proxy the request and handle timeout error', function(done) {
     var proxy = httpProxy.createProxyServer({
       target: 'http://127.0.0.1:45001',
