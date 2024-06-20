@@ -1,4 +1,4 @@
-name: Release on main
+name: Release on master
 
 permissions:
   contents: write # to be able to publish a GitHub release
@@ -9,8 +9,7 @@ permissions:
 on:
   push:
     branches:
-      - main
-      - next
+      - master
 
 # Cancel previous workflows which might still be running
 concurrency:
