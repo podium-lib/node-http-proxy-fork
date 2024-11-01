@@ -1,3 +1,6 @@
+.github
+release.config.mjs
+renovate.json
 test
 examples
 doc
