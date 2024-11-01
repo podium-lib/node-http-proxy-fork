@@ -3,7 +3,7 @@
   "version": "1.20.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/http-party/node-http-proxy.git"
+    "url": "https://github.com/podium-lib/node-http-proxy-fork.git"
   },
   "description": "A fork of http-party/node-http-proxy",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
