@@ -432,10 +432,10 @@ describe('#followRedirects', function () {
     var proxyServer = http.createServer(requestHandler);
 
     var source = http.createServer(function(req, res) {
-
-      if (url.parse(req.url).pathname === '/redirect') {
+      if (req.url === '/redirect') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('ok');
+        return;
       }
 
       res.writeHead(301, { 'Location': '/redirect' });
