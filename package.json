@@ -13,16 +13,18 @@
   "main": "index.js",
   "dependencies": {
     "eventemitter3": "^4.0.0",
-    "requires-port": "^1.0.0",
-    "follow-redirects": "^1.15.5"
+    "follow-redirects": "^1.15.5",
+    "requires-port": "^1.0.0"
   },
   "devDependencies": {
+    "@podium/semantic-release-config": "^2.0.0",
     "async": "^3.0.0",
     "auto-changelog": "^1.15.0",
     "concat-stream": "^2.0.0",
     "expect.js": "~0.3.1",
     "mocha": "^3.5.3",
     "nyc": "^14.0.0",
+    "semantic-release": "^24.2.0",
     "semver": "^5.0.3",
     "socket.io": "^2.1.0",
     "socket.io-client": "^2.1.0",
