@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/podium-lib/node-http-proxy-fork/compare/v1.20.0...v1.20.1) (2024-11-01)
+
+
+### Bug Fixes
+
+* remove deprecated use of utils._extend ([b464959](https://github.com/podium-lib/node-http-proxy-fork/commit/b46495967d236dab510c7f31584fd1cae5876b29))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
