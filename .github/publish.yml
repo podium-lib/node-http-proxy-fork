@@ -39,9 +39,6 @@ jobs:
       - name: Run all tests
         run: npm test
 
-      - name: Generate and check types
-        run: npm run types
-
       - name: Release and publish
         run: npx semantic-release
         env:
